@@ -1,0 +1,1 @@
+api text to match local and remote(azure) directory structures
