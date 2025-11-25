@@ -1,2 +1,2 @@
 # eliandlulu
-Elu and Lulu cafe website
+Elu and Lulu cafe website, with CI/CD set up.
