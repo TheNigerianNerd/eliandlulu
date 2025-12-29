@@ -1,0 +1,32 @@
+@page "/"
+@inject HttpClient Http
+
+<PageTitle>Eli and Lulu Cafe</PageTitle>
+
+<h1>Welcome to Eli and Lulu Cafe!</h1>
+
+@if(_menuItems == null)
+{
+    <p>Loading menu items...</p>
+}
+else
+{
+    <div class="grid">
+        @foreach(MenuItem menuItem in _menuItems)
+        {
+            <MenuItemCard MenuItem="menuItem" />
+        }
+    </div>
+}
+@code{
+    private IEnumerable<MenuItem>? _menuItems;
+    protected override async Task OnInitializedAsync()
+    {
+        try{
+            _menuItems = await Http.GetFromJsonAsync<IEnumerable<MenuItem>>("menu/menu-items.json");
+        }
+        catch(Exception ex){
+            Console.WriteLine($"Actual error: {ex.GetType().Name} - {ex.Message}");
+        }
+    }
+}
