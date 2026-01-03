@@ -1,9 +1,9 @@
-{ 
-"scripts":  { 
-"sass":  "sass",
-"build": "sass input.scss output.css" 
-}, 
-"devDependencies":  { 
-"sass":  "^1.83.0" 
-} 
+{
+  "scripts": {
+    "sass": "sass",
+    "build": "sass main.scss css/app.css"
+  },
+  "devDependencies": {
+    "sass": "^1.83.0"
+  }
 }
