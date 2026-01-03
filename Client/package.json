@@ -1,6 +1,7 @@
 { 
 "scripts":  { 
-"sass":  "sass"
+"sass":  "sass",
+"build": "dotnet publish -c Release -o output"
 }, 
 "devDependencies":  { 
 "sass":  "^1.83.0" 
