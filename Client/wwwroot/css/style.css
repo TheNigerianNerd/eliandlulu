@@ -596,7 +596,11 @@ h1, h2, h3, h4, h5, h6, figure {
   line-height: 50px;
   font-style: italic;
   font-weight: 300;
-  color: #fff;
+  color: var(--brand);
+  text-shadow: 0 3px 12px rgba(0, 0, 0, 0.35);
+  background: rgba(0, 0, 0, 0.25);
+  padding: 1.2rem 1.6rem;
+  border-radius: 8px;
 }
 @media screen and (max-width: 992px) {
   #fh5co-featured-testimony blockquote p {
